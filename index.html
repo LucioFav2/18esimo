@@ -33,10 +33,12 @@
 
         .container {
             display: flex;
+            flex-direction: row;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             width: 80%;
             max-width: 1200px;
+            flex-wrap: wrap; /* Consente il wrap quando su schermi piccoli */
         }
 
         .card {
@@ -52,6 +54,7 @@
             transition: transform 0.2s ease-in-out;
             overflow: hidden;
             margin-right: 50px;
+            margin-bottom: 30px;
         }
 
         .card:active {
@@ -131,7 +134,6 @@
             display: inline-block; /* Permette di avere la giusta dimensione per il testo */
         }
 
-
         .info-item .separator {
             margin: 0 5px; /* Distanza tra immagine e testo */
             color: #000000;
@@ -174,8 +176,6 @@
             opacity: 0.8;
         }
 
-        /* Spazio prima dei testi */
-
         /* Footer della card con QR code e loghi */
         .footer {
             position: absolute;
@@ -200,6 +200,51 @@
         .footer-logos img {
             width: 60px;
             margin: 0 5px;
+        }
+
+        /* Media query per dispositivi mobili */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .info-container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .title {
+                font-size: 40px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .info-item span {
+                font-size: 30px;
+            }
+
+            .info-item .separator {
+                font-size: 30px;
+            }
+
+            .map-link, .whatsapp-btn {
+                width: 100%;
+                font-size: 16px;
+                padding: 12px;
+            }
+
+            .footer-logos img {
+                width: 50px;
+            }
         }
     </style>
 </head>
