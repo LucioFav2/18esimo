@@ -37,9 +37,11 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 80%;
+            width: 100%;
             max-width: 1200px;
             padding: 20px;
+            height: 100%; /* Garantisce che il contenitore occupi tutto lo schermo */
+            box-sizing: border-box;
         }
 
         .card {
@@ -86,9 +88,9 @@
             height: 200px;
             background: url('logo.gif') center/cover no-repeat;
             border-radius: 10px;
-            display: block; /* Rende l'elemento un blocco per usare margini automatici */
-            margin-left: auto; /* Allinea a sinistra automaticamente */
-            margin-right: auto; /* Allinea a destra automaticamente */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .title {
@@ -104,40 +106,40 @@
             color: #888;
         }
 
-        /* Sezione delle informazioni a destra */
         .info-container {
-            width: 500px;
+            width: 100%;
             padding: 30px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            background-color: transparent; /* Rimosso il background */
-            text-align: center; /* Allinea il testo al centro */
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            text-align: center;
+            box-sizing: border-box;
         }
 
         .info-item {
             display: flex;
-            align-items: center; /* Centra verticalmente il testo con l'icona */
+            align-items: center;
+            justify-content: center;
             margin: 20px 0;
             padding: 10px;
-            background-color: transparent; /* Rimosso il contorno grigio */
         }
 
         .info-item img {
             width: 50px;
             height: 50px;
-            margin-right: 5px; /* Distanza tra l'immagine e il testo */
+            margin-right: 5px;
         }
 
         .info-item span {
-            font-size: 50px; /* Aumentato la dimensione del testo per data e orario */
+            font-size: 50px;
             color: #fff;
-            display: inline-block; /* Permette di avere la giusta dimensione per il testo */
         }
 
         .info-item .separator {
-            margin: 0 5px; /* Distanza tra immagine e testo */
-            color: #000000;
+            margin: 0 5px;
+            color: #000;
             font-size: 50px;
         }
 
@@ -167,9 +169,9 @@
         }
 
         .whatsapp-btn img {
-            width: 25px; /* Immagine piccola accanto al testo */
+            width: 25px;
             height: 25px;
-            margin-right: 10px; /* Distanza tra l'immagine e il testo */
+            margin-right: 10px;
         }
 
         .whatsapp-btn:hover,
@@ -177,12 +179,12 @@
             opacity: 0.8;
         }
 
-        /* Footer della card con QR code e loghi */
         .footer {
             position: absolute;
             bottom: 20px;
             width: 100%;
             display: flex;
+            justify-content: center;
             align-items: center;
         }
 
@@ -194,8 +196,7 @@
         }
 
         .footer-logos {
-            display: flex; 
-            width: 100%;
+            display: flex;
         }
 
         .footer-logos img {
@@ -205,14 +206,9 @@
 
         /* Media query per dispositivi mobili */
         @media (max-width: 768px) {
-            .container {
-                width: 100%; /* Rende la container più larga per schermi piccoli */
-                padding: 15px;
-            }
-
             .card {
-                width: 90%; /* La card occupa il 90% della larghezza */
-                margin-bottom: 30px;
+                width: 90%;
+                margin-bottom: 20px;
             }
 
             .info-container {
@@ -264,10 +260,7 @@
 
             <!-- Footer con QR code e loghi sponsor -->
             <div class="footer">
-                <!-- QR Code -->
                 <div class="qr-code"></div>
-
-                <!-- Loghi degli Sponsor -->
                 <div class="footer-logos">
                     <img src="favinoinc.png" alt="Sponsor 1">
                     <img src="satanelli.png" alt="Sponsor 2">
@@ -276,9 +269,8 @@
             </div>
         </div>
 
-        <!-- Sezione informazioni a destra -->
+        <!-- Sezione informazioni sotto la card -->
         <div class="info-container">
-            <!-- Data e orario -->
             <div class="info-item">
                 <img src="calendar.png" alt="Calendario">
                 <span>10.05.2025</span>
@@ -287,10 +279,8 @@
                 <span>19h00</span>
             </div>
 
-            <!-- Link Google Maps -->
             <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d229.99400275083664!2d12.761125076199688!3d42.53516851445719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDMyJzA2LjUiTiAxMsKwNDUnNDAuOSJF!5e0!3m2!1sit!2sit!4v1745695123685!5m2!1sit!2sit" width="440" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-            <!-- Pulsante WhatsApp con immagine -->
             <a href="https://whatsapp.com/channel/0029VaELms0HFxP64YuQaK1I" target="_blank" class="whatsapp-btn">
                 <img src="whatsapp.png" alt="WhatsApp">
                 CANALE WHATSAPP
