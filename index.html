@@ -29,16 +29,16 @@
             font-family: 'Sugo Display', sans-serif;
             color: #fff;
             overflow: hidden;
+            flex-direction: column; /* Centra i contenuti verticalmente */
         }
 
         .container {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             width: 80%;
             max-width: 1200px;
-            flex-wrap: wrap; /* Consente il wrap quando su schermi piccoli */
             padding: 20px;
         }
 
@@ -54,7 +54,6 @@
             transform: scale(1);
             transition: transform 0.2s ease-in-out;
             overflow: hidden;
-            margin-right: 50px;
             margin-bottom: 30px;
         }
 
@@ -113,6 +112,7 @@
             flex-direction: column;
             justify-content: space-between;
             background-color: transparent; /* Rimosso il background */
+            text-align: center; /* Allinea il testo al centro */
         }
 
         .info-item {
@@ -206,15 +206,13 @@
         /* Media query per dispositivi mobili */
         @media (max-width: 768px) {
             .container {
-                flex-direction: column;
-                align-items: center;
+                width: 100%; /* Rende la container più larga per schermi piccoli */
+                padding: 15px;
             }
 
             .card {
-                width: 90%;
-                margin-right: 0;
-                margin-bottom: 20px;
-                margin-left: 0; /* Aggiunto per migliorare il layout */
+                width: 90%; /* La card occupa il 90% della larghezza */
+                margin-bottom: 30px;
             }
 
             .info-container {
